@@ -1457,21 +1457,24 @@ body {
   }
 
   .radio-row {
-    display: flex;
-    gap: 25px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
 
-  .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: #fff;
-    white-space: nowrap;
-  }
+.radio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
 
   input[type="radio"] {
     accent-color: #3be2ff;
@@ -1583,11 +1586,21 @@ body {
 
   <!-- Are You Under Attack -->
   <label>Are You Under Attack?</label>
-  <div class="radio-row">
-    <div class="radio-item"><input type="radio" name="attack" required> <span>Yes</span></div>
-    <div class="radio-item"><input type="radio" name="attack"> <span>No</span></div>
-    <div class="radio-item"><input type="radio" name="attack"> <span>Not Sure</span></div>
-  </div>
+<div class="radio-row">
+  <label class="radio-item">
+    <input type="radio" name="attack" value="yes" required>
+    <span>Yes</span>
+  </label>
+  <label class="radio-item">
+    <input type="radio" name="attack" value="no">
+    <span>No</span>
+  </label>
+  <label class="radio-item">
+    <input type="radio" name="attack" value="unsure">
+    <span>Unsure</span>
+  </label>
+</div>
+
 
   <!-- Row 3 -->
   <div class="form-row">
@@ -3064,5 +3077,6 @@ var nectar_front_i18n = {"menu":"Menu","next":"Next","previous":"Previous","clos
 <!-- Calendly link widget end -->
 </body>
 </html>
+
 
 <!-- Page cached by LiteSpeed Cache 7.3.0.1 on 2025-09-05 15:30:21 -->
